@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="../img/ICONO.png"> 
+	<title>ografix</title>
+	<link href="admin/css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a38c16a07e.js"></script>
+    <style>
+        img{
+            display: block;
+            margin: auto;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="">
+            <form action="../php/sendproof.php" class="orderslist .col-md-12 " method="post" enctype="multipart/form-data" style="padding-bottom:100px;">
+                <div class="col-md-12 d-inline-block">
+                    <div class="col-md-4 d-inline-block">
+                        <h2 class="col-md-2">Order</h2>
+                        <input type="text" value="1378" id="id_order" style="display: none;">
+                        <input type="text" value="348" id="id_user" style="display: none;">
+                    </div>
+                    <label class="col-md-6 ">
+                        <h2 style="text-align: right;">1017_B</h2>
+                    </label>
+                </div>
+                <h4 class="customerinfo">Informacion del cliente</h4>
+                <div style="width: 250px;float: right;" id="buttons_status"></div>
+                <div>
+                    <div class="dataorder" style="display: grid;">
+                        <label class="campos">Nombre:</label><small class="field-help-message dateuser">&nbsp;&nbsp; Angel Hernandez</small>
+                        <input type="text" id="name1378" style="display: none;" name="name" value="Angel Hernandez">
+                        <input type="text" name="id_order" value="1378" style="display: none;">
+                        <label class="campos">Correo:</label><small class="field-help-message dateuser">&nbsp;&nbsp; angel_0_6@live.com.mx</small>
+                        <label class="campos">Telefono:</label><small class="field-help-message dateuser">&nbsp;&nbsp; 4443154529</small>
+                    </div>
+                    <h4 style="text-align: center;">Detalles de la orden</h4>
+                    <div class="dataorder" style="padding: 10px 0 10px 0;margin: 30px 0 30px 0;">
+                        <label class="campos">Fecha de la orden:</label><small class="field-help-message dateuser" style="width: 80%;">&nbsp;&nbsp; 2022-01-26 13:48:00</small><br>
+                        <label class="campos">Fecha de entrega:</label><small class="field-help-message dateuser" style="width: 80%;">&nbsp;&nbsp; Miércoles 2 de Febrero del 2022</small><br>
+                        <label class="campos"><small class="field-help-message dateuser" style="width: 80%;">2000 4/0</small></label>
+                    </div>
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <h1 style="text-align: center;">Frente</h1>
+                            <img src="https://res.cloudinary.com/ografix/image/upload/w_500/v1/usr_436/FRENTE%20GORDITAS.png" width="500">	
+                        </div>
+                        <div class="col-md-6">
+                            <h1 style="text-align: center;">Vuelta</h1>
+                            <img src="https://res.cloudinary.com/ografix/image/upload/w_500/v1/usr_436/REVERSO%20GORDITAS.png" width="500">	
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

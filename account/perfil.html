@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ografix</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Favicons -->
+  <link href="../img/ICONO.png" rel="icon">
+  <link href="../img/ICONO.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/owl.transitions.css" rel="stylesheet">
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../lib/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Nivo Slider Theme -->
+  <link href="../css/nivo-slider-theme.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- Responsive Stylesheet File -->
+  <link href="../css/responsive.css" rel="stylesheet">
+  <!--
+    tarjetas señor alberto de gruas
+  -->
+	
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example" >
+
+  <div id="preloader"></div>
+
+  <header>
+    <div id="sticker" class="header-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 ">
+            <nav class="navbar navbar-default">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+                </a>
+                <a class="navbar-brand page-scroll sticky-logo" href="../index.html">
+                  <img src="../img/ografix logoweb.png" width="173" height="50" style="height: 100%;">
+								</a>
+              </div>
+              <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a style="color: #000;font-size: 19px;margin-top: 3px;" class="page-scroll" href="identificate.html">Identifícate</a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <p style="color: #fff;font-size: 19px;">Tel:  <strong style="font-size: 27px;">444 847 1216</strong></p>
+                    </a> 
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sticker" class="subnav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-12 col-center credits">
+            <div class="col-md-2">
+              <a class="a-subnav-menu" style="color: #202020;" href="account.php">Perfil </a>
+            </div>
+            <div class="col-md-2">
+              <a class="a-subnav-menu" href="orders.php">        Ordenes </a>
+            </div>
+            <div class="col-md-2">
+              <a class="a-subnav-menu" href="reorder.php">       Reordenar </a>
+            </div>
+            <div class="col-md-2">
+              <a class="a-subnav-menu" href="reorder.php">       Trabajos </a> 
+            </div>
+            <div class="col-md-2">
+              <a class="a-subnav-menu" href="notifications.php"> Notificaciones </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+  
+  <div id="contact" class="portfolio-area area-padding fix fullheight">
+    <div class="contact-inner area-padding">
+      <div class="contact-overly"></div>
+      <div class="container ">
+        <div class="row flex">
+
+          <!-- Start  contact -->
+          <div class="col-md-12 col-sm-12 col-xs-12 mauto">
+            <section style="padding-bottom: 80px;">
+              <div class="container">
+                  <div id="summary" class="summary">
+                      <div class="avatarvb">
+                          <a href="#" onclick="NewAvatar()">
+                          <?php
+                              if($_SESSION['source'] == "google")
+                              {
+                          ?>
+                                  <img alt="" class="avatar-img"  src="<?php echo ($_SESSION['avatar']);?>" width="100" height="100">
+                          <?php
+                              }
+                          ?>
+                          <?php
+                              if($_SESSION['avatar'] && !isset($_SESSION['source']))
+                              {
+                          ?>
+                                  <img alt="" class="avatar-img"  src="data:image/png;base64,<?php echo base64_encode($_SESSION['avatar']);?>" width="100" height="100">
+                          <?php
+                              }
+                              if($_SESSION['avatar']==null)
+                              {
+                          ?>
+                                  <img alt="" class="avatar-img" src="/assets/avatar.png" width="100" height="100">
+                          <?php
+                              }
+                          ?>
+                          
+                          <!--<div class="overlayy">
+                              <button  class="button tiny primary" id="edit_picture_button" title="Change your profile picture">Change</button>
+                              </div>
+                          -->
+                          </a>
+                      </div>
+                      <div>
+                          <h1 style="font-size: 2.5rem;margin-bottom: 0;" class="font-medium"><?php echo $_SESSION['name'];?></h1>
+                          <p class="font-light"><?php echo $_SESSION['email'];?></p>
+                          <p>
+                              <!--<a href="#" class="button tiny primary" data-reveal-id="edit-profile-modal">Edit profile</a>-->
+                              <a href="../recover.php">
+                                  <button type="submit" class="secondary">Cambiar contraseña</button>
+                              </a>
+                              <button type="submit" onclick="NewEmail()" class="secondary">Cambiar correo</button>
+                          </p>
+                      </div>
+                  </div>
+                  <h2 class="light border-bottom">General</h2><table id="details" class="responsive">
+                  <table id="details" class="responsive font-light">
+                      <tbody>
+                      <tr>
+                          <td>Nombre</td>
+                          <td><?php echo $_SESSION['name'];?></td>
+                      </tr>
+                      <!--
+                          <tr>
+                              <td>Store credit</td>
+                              <td class="currency">$0</td>
+                          </tr>
+                          <tr>
+                              <td>Gift card balance</td>
+                              <td class="currency">
+                              $0
+                              <a href="/products/gift-cards" class="inline-space-left">Buy a gift card</a>
+                              </td>
+                          </tr>
+                      -->
+                      <tr>
+                          <td>Historial</td>
+                          <td>
+                          <?php
+                              include 'php/conexion_be.php';
+                              $query = "SELECT * FROM orders WHERE id_user='$id_user'";
+                              $result = mysqli_query($conexion,$query);
+                              if(mysqli_num_rows($result)==0)
+                              {
+                          ?>
+                              No past orders
+                          <?php
+                              }
+                              if(mysqli_num_rows($result)>0)
+                              {
+                                  $completas=0;
+                                  $canceladas=0;
+                                  $in_production =0;
+                                  while ($extraido= mysqli_fetch_array($result))
+                                  {
+                                      $id             = $extraido['id'];
+                                      $width_inches   = $extraido['width_inches'];
+                                      $height_inches  = $extraido['height_inches'];
+                                      $price          = $extraido['price'];
+                                      $tipe           = $extraido['tipe'];
+                                      $quantity       = $extraido['quantity'];
+                                      $id_images      = $extraido['id_images'];
+                                      $txt_details    = $extraido['txt_details'];
+                                      $dates          = $extraido['dates'];
+                                      $statusp        = $extraido['statusp'];
+                                      $id_address     = $extraido['id_address'];
+                                      if($statusp==4)
+                                      {
+                                          $canceladas++;
+                                      }
+                                      if($statusp==5)//In production 
+                                      {
+                                          $completas++;
+                                      }
+                                      if($statusp==0 || $statusp==2)
+                                      {
+                                          $in_production++;
+                                      }
+                                  }
+                                  ?>
+                                   <a href="../orders.php">
+                                  <?php
+                                  if($canceladas != 0)
+                                  {
+                                  ?>
+                                     <?php echo $canceladas?> Canceled,
+                                  <?php
+                                  }
+                                  if($completas != 0)
+                                  {
+                                  ?>
+                                      <?php echo $completas?> Complete,
+                                  <?php
+                                  }
+                                  if($in_production != 0)
+                                  {
+                                  ?>
+                                      <?php echo $in_production?> In production
+                                  <?php
+                                  }
+                                  if($canceladas == 0 && $completas== 0 && $in_production== 0)
+                                  {
+                                  ?>
+                                     No past orders
+                                  <?php
+                                  }
+                                  ?>
+                                  </a>
+                                  <?php
+                              }
+                          ?>
+                          
+                          </td>
+                      </tr>
+                      <tr>
+                          <td id="default_shipping_address">
+                              Direccion de envio
+                              <span id="shipping-address-book-app">&nbsp;
+                                  <button class="button link edit" type="button" onclick="Address()">Edit</button>
+                              </span>
+                          </td>
+                          <td id="default_shipping_address_line">
+                            calle numero colonia
+                            cuidad 
+                            estado
+                            cp
+
+                              <?php
+                               include 'php/conexion_be.php';
+                               $query = "SELECT * FROM address_t WHERE id_user='$id_user'";
+                               $result = mysqli_query($conexion,$query);
+                               if(mysqli_num_rows($result)>0)
+                               {
+                                   while ($extraido= mysqli_fetch_array($result))
+                                   {
+                                       $id             = $extraido['id'];
+                                       $country        = $extraido['country'];
+                                       $full_name      = $extraido['full_name'];
+                                       $company        = $extraido['company'];
+                                       $street_address1= $extraido['street_address1'];
+                                       $street_address2= $extraido['street_address2'];
+                                       $city           = $extraido['city'];
+                                       $statedir       = $extraido['statedir'];
+                                       $zip_code       = $extraido['zip_code'];
+                                       $default_address= $extraido['default_address'];
+                                       if($default_address==1)
+                                       {
+                                          if($country=="US")
+                                          {
+                                          
+                                              $country = "United States";
+                                          }
+                                          if($country=="MX")
+                                          {
+                                              $country = "Mexico";
+                                          }
+                                           echo $street_address1." ".$street_address2.", ".$city.", ". $statedir." ".$zip_code.", ".$country;
+                                           mysqli_close($conexion);
+                                           break;
+                                       }
+                                   }
+                               }
+                              ?>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                            Direccion de facturación
+                          <span id="billing-address-book-app">&nbsp;
+                              <span id="shipping-address-book-app">&nbsp;
+                                  <button class="button link edit" type="button" onclick="Billing_Address()">Edit</button>
+                              </span>
+                          </td>
+                          <td></td>
+                      </tr><!--
+                      <tr id="payment-method-app">
+                          <td>Default payment method&nbsp;<button class="button link edit" type="button">Edit</button><div class="modal-container" id="payment-method-modal" tabindex="-1"><div aria-label="Modal" aria-modal="true" class="modal-content-wrapper" role="dialog"><div class="modal-content"><div id="payment-methods-list"><h2><span>Edit payment methods</span><img class="seal" src="https://ssl.comodo.com/images/trusted-site-seal.png"></h2><ul></ul><p class="add-new"><button type="button" class="link">Add a new payment method</button></p></div><button class="modal-close-x" type="button">×</button></div><div class="modal-bg-close" role="presentation"></div></div><div class="modal-bg-close" role="presentation"></div></div></td><td></td></tr>
+                          -->
+                      <tr>
+                          <td>
+                          Measurement system
+                          <button class="button link edit" type="button" onclick="measurement_system()">Edit</button>
+                          </td>
+                          <td>
+                              <?php
+                                  include 'php/conexion_be.php';
+                                  $query = "SELECT * FROM users WHERE id='$id_user'";
+                                  $result = mysqli_query($conexion,$query);
+                                  if(mysqli_num_rows($result)>0)
+                                  {
+                                      while ($extraido= mysqli_fetch_array($result))
+                                      {
+                                          $id             = $extraido['id'];
+                                          $country        = $extraido['country'];
+                                          $full_name      = $extraido['full_name'];
+                                          $company        = $extraido['company'];
+                                          $street_address1= $extraido['street_address1'];
+                                          $street_address2= $extraido['street_address2'];
+                                          $city           = $extraido['city'];
+                                          $statedir       = $extraido['statedir'];
+                                          $zip_code       = $extraido['zip_code'];
+                                          $default_address= $extraido['default_address'];
+                                          $measurement 	= $extraido['measurement'];
+                                      }
+                                  }
+                                  if($measurement==0)
+                                  {
+                                      ?>
+                                          Imperial (i.e. inches)
+                                      <?php
+                                  }else
+                                  {
+                                      ?>
+                                          Metric (i.e. millimeters) 
+                                      <?php
+                                  }
+                                  ?>
+                          
+                          </td>
+                      </tr><!--
+                      <tr>
+                          <td>
+                          Freebies
+                          <a href="javascript:" class="button tiny primary edit" data-reveal-id="edit-freebies-modal">Edit</a>
+                          </td>
+                          <td>On</td>
+                      </tr>-->
+                      </tbody>
+                  </table>
+              </div>
+          </section>
+          </div>
+          <!-- End Left contact -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Contact Area -->
+
+  <!-- Start Footer bottom Area -->
+  <footer>
+    <div class="footer-area" style="display: none;visibility: hidden;">
+      <div class="container">
+        <div class="row">
+          <h4 class="credits">Informacion</h4>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head credits">
+                <div class="footer-contacts">
+                  <p><span>Telefono:</span> 44 48 47 12 16</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head credits">
+                
+                <div class="footer-contacts">
+                 <!-- <p><span>Telefono:</span> 44 48 47 12 16</p>-->
+                  <p><span>Email:</span> ografix@gmail.com</p>
+                 <!-- <p><span>Horario:</span> 8am-6pm</p>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head credits">
+                <div class="footer-contacts">
+                   <p><span>Horario:</span> 9am-6pm</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-area-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright text-center">
+              <p>
+                &copy; Copyright <strong>Ografix</strong>. All Rights Reserved
+              </p>
+            </div>
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../lib/venobox/venobox.min.js"></script>
+  <script src="../lib/knob/jquery.knob.js"></script>
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/parallax/parallax.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+  <script src="../lib/appear/jquery.appear.js"></script>
+  <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>          
+
+
+  <!-- Contact Form JavaScript File -->
+  <script src="../contactform/contactform.js"></script>
+
+  <script src="../js/main.js"></script>
+
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+
+</html>
